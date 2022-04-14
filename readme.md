@@ -59,7 +59,7 @@ The end of the spike is:
 
     or
 
-    the frame where: `tᵢ - tᵢ₊₁ < 0`
+    the frame where: `tᵢ > tᵢ₊₁` (aka, the voltage drops)
 
 No spike can be more than 50 frames long.
 
