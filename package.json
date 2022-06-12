@@ -1,16 +1,19 @@
 {
   "name": "signal-processing",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "index.ts",
   "author": "Dustin Lacewell",
   "license": "ISC",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "test:watch": "jest --watch --verbose"
+  },
   "devDependencies": {
-    "ts-node": "^10.7.0",
-    "typescript": "^4.6.3"
+    "@types/jest": "^28.1.1",
+    "jest-mock-extended": "^2.0.6",
+    "ts-jest": "^28.0.4",
+    "typescript": "^4.7.3"
   },
   "dependencies": {
     "inversify": "^6.0.1",

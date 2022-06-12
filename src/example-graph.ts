@@ -1,5 +1,3 @@
-
-
 const plt = require('matplotnode');
 const x = new Array(100).fill(0).map((x, i) => i / Math.PI);
 
