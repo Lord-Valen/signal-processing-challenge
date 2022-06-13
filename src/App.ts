@@ -1,27 +1,27 @@
 import { inject, injectable } from "inversify";
-import { IDataAccessService, IDataAnalysisService, IDataPreprocessingService, IGraphService, IReportService } from "./interfaces";
+import { IDataAccessController, IDataAnalysisController, IDataPreprocessingController, IGraphController, IReportController } from "./interfaces";
 import { TYPES } from "./types";
 
 @injectable()
 export class App {
-    private reportService: IReportService
-    private graphService: IGraphService
-    private dataAnalysisService: IDataAnalysisService
-    private dataPreprocessingService: IDataPreprocessingService
-    private dataAccessService: IDataAccessService
+    private reportController: IReportController
+    private graphController: IGraphController
+    private dataAnalysisController: IDataAnalysisController
+    private dataPreprocessingController: IDataPreprocessingController
+    private dataAccessController: IDataAccessController
 
     public constructor(
-        @inject(TYPES.IReportService) reportService: IReportService,
-        @inject(TYPES.IGraphService) graphService: IGraphService,
-        @inject(TYPES.IDataAnalysisService) dataAnalysisService: IDataAnalysisService,
-        @inject(TYPES.IDataPreprocessingService) dataPreprocessingService: IDataPreprocessingService,
-        @inject(TYPES.IDataAccessService) dataAccessService: IDataAccessService,
+        @inject(TYPES.IReportController) reportController: IReportController,
+        @inject(TYPES.IGraphController) graphController: IGraphController,
+        @inject(TYPES.IDataAnalysisController) dataAnalysisController: IDataAnalysisController,
+        @inject(TYPES.IDataPreprocessingController) dataPreprocessingController: IDataPreprocessingController,
+        @inject(TYPES.IDataAccessController) dataAccessController: IDataAccessController,
     ) {
-        this.reportService = reportService;
-        this.graphService = graphService;
-        this.dataAnalysisService = dataAnalysisService;
-        this.dataPreprocessingService = dataPreprocessingService;
-        this.dataAccessService = dataAccessService;
+        this.reportController = reportController;
+        this.graphController = graphController;
+        this.dataAnalysisController = dataAnalysisController;
+        this.dataPreprocessingController = dataPreprocessingController;
+        this.dataAccessController = dataAccessController;
     }
 
     run() {
@@ -30,5 +30,5 @@ export class App {
         // Analyze data
         // Graph data
         // Report data
-     }
+    }
 }

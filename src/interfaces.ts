@@ -1,23 +1,34 @@
+// Application
 export interface IApp {
     run(): void
 }
 
-export interface IReportService {
+// Controllers
+export interface IReportController {
     run(): void
 }
 
-export interface IGraphService {
+export interface IGraphController {
     run(): void
 }
 
-export interface IDataAnalysisService {
+export interface IDataAnalysisController {
     run(): void
 }
 
-export interface IDataPreprocessingService {
+export interface IDataPreprocessingController {
     run(): void
 }
 
-export interface IDataAccessService {
+export interface IDataAccessController {
+    run(): void
+}
+
+// Services
+export interface IDataSmoothingService {
+    run(): void
+}
+
+export interface IDataSpikeService {
     run(): void
 }
